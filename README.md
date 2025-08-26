@@ -2,7 +2,7 @@
 
 A powerful Retrieval-Augmented Generation (RAG) application that allows users to upload PDF documents and have interactive conversations with their content using AI. Built with Streamlit for the web interface and powered by LangChain, FAISS vector database, and Ollama's Llama 3.2 model.
 
-## 🚀 Features
+## Features
 
 - **PDF Text Extraction**: Seamlessly extract text content from uploaded PDF files
 - **Intelligent Document Chunking**: Split large documents into manageable chunks with overlap for context preservation
@@ -12,7 +12,7 @@ A powerful Retrieval-Augmented Generation (RAG) application that allows users to
 - **Persistent Storage**: Save and load vector stores for reuse across sessions
 - **User-Friendly Interface**: Clean and intuitive Streamlit web interface
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend**: Streamlit
 - **PDF Processing**: PyPDF2
@@ -22,7 +22,7 @@ A powerful Retrieval-Augmented Generation (RAG) application that allows users to
 - **Language Model**: Ollama Llama 3.2
 - **Text Splitting**: RecursiveCharacterTextSplitter
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running this application, ensure you have:
 
@@ -34,7 +34,7 @@ Before running this application, ensure you have:
       ollama pull llama3.2
    ```
 
-## 🔧 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -53,7 +53,7 @@ Before running this application, ensure you have:
       pip install -r requirements.txt
    ```
 
-## 📦 Dependencies
+## Dependencies
 
 The application requires the following Python packages:
 
@@ -69,7 +69,7 @@ langchain-community
 
 Create a `requirements.txt` file with the above dependencies for easy installation.
 
-## 🚀 Usage
+## Usage
 
 1. **Start the Streamlit application**
    ```bash
@@ -87,7 +87,7 @@ Create a `requirements.txt` file with the above dependencies for easy installati
 
 5. **Start chatting** by typing questions about your PDF content in the text input field
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 rag-pdf-chat/
@@ -98,7 +98,7 @@ rag-pdf-chat/
 └── README.md             # Project documentation
 ```
 
-## 🔍 How It Works
+## How It Works
 
 1. **PDF Processing**: The application extracts text from uploaded PDF files using PyPDF2
 2. **Text Chunking**: Large documents are split into smaller, overlapping chunks (1000 characters with 200 character overlap)
@@ -109,7 +109,7 @@ rag-pdf-chat/
       - Similar document chunks are retrieved from FAISS
       - Retrieved context is sent to Llama 3.2 for answer generation
 
-## ⚙️ Configuration
+## Configuration
 
 ### Embedding Model
 The application uses `sentence-transformers/all-MiniLM-L6-v2` for generating embeddings. You can modify this in the code:
@@ -132,7 +132,7 @@ The application uses Ollama's Llama 3.2. Ensure the model is available:
 llm = Ollama(model="llama3.2")
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -148,7 +148,7 @@ llm = Ollama(model="llama3.2")
       - Reduce chunk size in the text splitter
       - Process smaller PDF files
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [LangChain](https://langchain.com/) for the RAG framework
 - [FAISS](https://github.com/facebookresearch/faiss) for vector similarity search
